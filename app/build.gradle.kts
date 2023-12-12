@@ -1,8 +1,15 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
-
+android {
+    // ...
+    buildFeatures {
+        viewBinding = true
+    }
+    // ...
+}
 android {
     namespace = "com.leo.guess"
     compileSdk = 34
@@ -31,6 +38,7 @@ android {
         jvmTarget = "1.8"
     }
 }
+
 
 dependencies {
 
